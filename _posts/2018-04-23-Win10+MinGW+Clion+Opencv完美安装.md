@@ -44,26 +44,26 @@ tags:
 > https://cmake.org (下载地址)
 >  打开相应目录  C:\Program Files\CMake\bin中 cmake-gui.exe
 
-![Alt text](./img/1524538516841.png)
+![Alt text](img/1524538516841.png)
 
 
     文件夹分别选择opencv目录下的sources和build目录 ，然后configure  。完成之后再generate;
     完成之后打开CMD窗口 定位到 opencv/build/目录下  执行命令  mingw32-make;
 
 
-![Alt text](./img/1524538574217.png)
+![Alt text](img/1524538574217.png)
 
 
 如果报以下错误：'thread' is not a member of 'std
 
-![Alt text](./img/1524538673863.png)
+![Alt text](img/1524538673863.png)
 
        If you are compiling this on windows, you will need Mingw-Builds v4.8.1 with posix-threads: sourceforge.net/projects/mingwbuilds/files/host-windows/… You can choose between sjlj and seh. Seh is only x64 and sjlj is both x32 and x64.
 
 
 就是说mingw版本不对，我在这里纠结了半天，终于找到一个老外的回答。赶紧回头重新下载了一个 。一次通过 。
 
-![Alt text](./img/1524538751092.png)
+![Alt text](img/1524538751092.png)
 
 ##  五，测试 
 好了 建个项目试试，打开Clion  File-settings  配置MinGW。
@@ -90,7 +90,7 @@ int main() {
 ```
 
 效果图如下:
-![Alt text](./1524538919028.png)
+![Alt text](img/1524538919028.png)
 
 
 
