@@ -26,11 +26,11 @@ tags:
 
 -------------------
 
- *一,[Clion 安装，配置](#Clion)
- *二,[MinGW](#MinGW)
- *三,[OpenCv](#OpenCv)
- *四,[CMake](#CMake)
- *五,[测试](#测试)
+ *[Clion 安装，配置](#Clion)
+ *[MinGW](#MinGW)
+ *[OpenCv](#OpenCv)
+ *[CMake](#CMake)
+ *[测试](#测试)
 
 ### Clion 
 
