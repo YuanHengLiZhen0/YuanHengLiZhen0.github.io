@@ -9,12 +9,11 @@ header-img: img/post-bg-BJJ.jpg
 catalog: true
 tags:
     - OpenCv
-    - java
 ---
 
 
 
-# Win10+MinGW+Clion+Opencv完美安装
+#Win10+MinGW+Clion+Opencv完美安装
 
 @(OpenCv)[Clion|编译器|配置]
 
