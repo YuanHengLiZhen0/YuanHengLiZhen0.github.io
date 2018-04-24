@@ -81,7 +81,7 @@ tags:
 
 如果报以下错误：'thread' is not a member of 'std
 
-![Alt text](img/1524538673863.png)
+![Alt text](/img/1524538673863.png)
 
 
 
