@@ -1,3 +1,18 @@
+
+---
+layout:     post
+title:      Win10+MinGW+Clion+Opencv完美安装
+subtitle:   
+date:       2018-04-23
+author:     zwht
+header-img: img/post-bg-BJJ.jpg
+catalog: true
+tags:
+    - BJJ
+---
+
+
+
 ### Win10+MinGW+Clion+Opencv完美安装
 
 @(OpenCv)[Clion|编译器|配置]
