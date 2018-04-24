@@ -30,11 +30,11 @@ tags:
  
  [MinGW](#MinGW)
  
- *[OpenCv](#OpenCv)
+ [OpenCv](#OpenCv)
  
- *[CMake](#CMake)
+ [CMake](#CMake)
  
- *[测试](#测试)
+ [测试](#测试)
 
 ### Clion 
 
