@@ -36,7 +36,7 @@ tags:
 下载地址如下:(安装完成将bin目录放进环境变量)
 >http://kent.dl.sourceforge.net/project/mingw-w64/Toolchains%20targetting%20Win64/Personal%20Builds/mingw-builds/6.3.0/threads-posix/seh/x86_64-6.3.0-release-win32-seh-rt_v5-rev1.7z
 
-![Alt text](./img/1524538333158.png)
+![Alt text](img/1524538333158.png)
 ##三,OpenCv(建立选择3.4.0版本)
 > https://www.opencv.org/releases.html
 
