@@ -1,7 +1,7 @@
 
 ---
 layout:     post
-title:      Win10+MinGW+Clion+Opencv完美安装
+title:      2018-04-23-Win10+MinGW+Clion+Opencv完美安装
 subtitle:   
 date:       2018-04-23
 author:     zwht
