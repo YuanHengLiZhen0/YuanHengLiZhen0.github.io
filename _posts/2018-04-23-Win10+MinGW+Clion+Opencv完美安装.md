@@ -14,7 +14,7 @@ tags:
 
 
 
-###  Win10+MinGW+Clion+Opencv完美安装
+#Win10+MinGW+Clion+Opencv完美安装
 
 @(OpenCv)[Clion|编译器|配置]
 
@@ -26,7 +26,7 @@ tags:
 
 -------------------
 
-[TOC]
+[toc]
 
 ## 一，Clion 安装，配置
 
