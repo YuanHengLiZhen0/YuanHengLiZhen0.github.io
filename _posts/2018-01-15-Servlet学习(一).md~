@@ -31,10 +31,13 @@ servlet处理web请求流程:
         2,服务器将请求信息发送至 Servlet；
         3,Servlet 生成响应内容并将其传给服务器。响应内容动态生成，通常取决于客户端的请求；
         4,服务器将响应返回给客户端。
+
 ![Alt text](/img/servlet/servlet1.jpg)
 
 ##### 1) servelt接口
+
 ![Alt text](/img/servlet/servlet2.png)
+
 (1) init() 方法
 &#8195&#8195在 Servlet 的生命期中，`仅执行一次` init() 方法。它是在服务器装入 Servlet 时执行的。无论有多少客户机访问 Servlet，都不会重复执行 init() 。
 &#8195&#8195在调用 service() 方法之前，应确保已完成了 init() 方法。
