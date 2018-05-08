@@ -161,25 +161,25 @@ String configFile = this.config.getInitParameter("config");
 - ServletContext
 WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的ServletContext对象，`它代表当前web应用。`
 ```java
-//1）多个web组件之间使用它实现数据共享
+1）多个web组件之间使用它实现数据共享
   ServletContext context =this.getServletContext(); //servletContext域对象
   context.setAttribute("data","数据"); //向域中存了一个data属性
   ServletContext context =this.getServletContext();
   String value = (String)context.getAttribute("data");  //获取域中的data属性
  
 
- //2）通过servletContext对象获取到整个web应用的配置信息
+2）通过servletContext对象获取到整个web应用的配置信息
 
   String url =this.getServletContext().getInitParameter("url");
   String username =this.getServletContext().getInitParameter("username");
   String password =this.getServletContext().getInitParameter("password");
 
- // 3）通过servletContext对象实现servlet转发
+3）通过servletContext对象实现servlet转发
  this.getServletContext().setAttribute("data","serlvet数据转发");
   RequestDispatcher rd =this.getServletContext().getRequestDispatcher("/viewdata.jsp");
   rd.forward(request,response);
 
-// 4）通过servletContext对象读取资源文件
+4）通过servletContext对象读取资源文件
             BufferedReader reader = new BufferedReader(new InputStreamReader(context.getResourceAsStream("/WEB-INF/web.xml"), "UTF-8"));
         reader.lines().filter(a -> a.length() > 40).forEach(System.out::println);
        
@@ -190,8 +190,7 @@ WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的Se
 
 - get请求：参数在url后面
 　  参数通过http协议传输(HTTP协议用ISO-8859-1编码),经过了两次编码，所以就要两次解码
-
-```java        
+```java
         String userName = request.getParameter("userName");
         String passwd = request.getParameter("password");
 
