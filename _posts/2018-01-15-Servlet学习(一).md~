@@ -23,7 +23,7 @@ tags:
 - intellj idea
 
 ## servlet
-&#8195&#8195 servlet是java编写的服务端程序,用来解析和响应web请求,并生成动态web内容.web项目中通常指的是实现了servlet接口的类.
+>servlet是java编写的服务端程序,用来解析和响应web请求,并生成动态web内容.web项目中通常指的是实现了servlet接口的类.
 
 servlet处理web请求流程:
 
@@ -207,6 +207,26 @@ WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的Se
  ```
 
 
+
+## Filter
+> servlet主要负责处理请求,filter负责拦截请求和放行.
+```xml
+    <filter>
+        <filter-name>TestFilter</filter-name>
+        <filter-class>TestFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>TestFilter</filter-name>
+        <url-pattern>*.login</url-pattern>
+    </filter-mapping>
+```
+**匹配规则**有三种：
+
+- 精确匹配 —— 如/foo.htm，只会匹配foo.htm这个URL
+- 路径匹配 —— 如/foo/*，会匹配以foo为前缀的URL
+- 后缀匹配 —— 如*.htm，会匹配所有以.htm为后缀的URL
+< url-pattern>的其他写法，如/foo/ ，/.htm ，/foo 都是不对的。
 
 
 
