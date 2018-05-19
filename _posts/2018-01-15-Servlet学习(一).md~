@@ -210,6 +210,7 @@ WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的Se
 
 ## Filter
 > servlet主要负责处理请求,filter负责拦截请求和放行.
+  设置(编码),日志,安全,
 ```xml
     <filter>
         <filter-name>TestFilter</filter-name>
@@ -228,6 +229,43 @@ WEB容器在启动时，它会为每个WEB应用程序都创建一个对应的Se
 - 后缀匹配 —— 如*.htm，会匹配所有以.htm为后缀的URL
 < url-pattern>的其他写法，如/foo/ ，/.htm ，/foo 都是不对的。
 
+**拦截**
+
+Filter接口中有一个doFilter方法，当开发人员编写好Filter，并配置对哪个web资源(拦截url)进行拦截后，web服务器每次在调用web资源之前，都会先调用一下filter的doFilter方法，因此，在该方法内编写代码可达到如下目的：
+
+- （1）调用目标资源之前，让一段代码执行。
+- （2） 是否调用目标资源(即是否让用户访问web资源)。
+    web服务器在调用doFilter方法时，会传递一个  filterChain对象进来，FilterChain对象是filter接口中最重要的一个对象，`它也提供了一个doFilter方法，开发人员可以根据需求决定是否调用此方法，调用该方法，则web服务器就会调用web资源的service方法`，即web资源就会被访问，否则web资源不会被访问。
+- （3）调用目标资源之后，让一段代码执行。
+
+
+```java
+    public class TestFilter implements Filter {
+    String encoding;
+    @Override
+    public void init(FilterConfig filterConfig) throws ServletException {
+       String encoding= filterConfig.getInitParameter("encoding");
+
+    }
+
+    @Override
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException {
+
+        HttpServletRequest request= (HttpServletRequest) servletRequest;
+        request.setCharacterEncoding(encoding);
+        System.out.println(servletRequest.getProtocol());
+        request.getServletContext().setAttribute("filter_port", servletRequest.getProtocol());
+        request.getServletContext().getRequestDispatcher("/login_filter.jsp").forward(servletRequest,servletResponse);
+
+    }
+
+    @Override
+    public void destroy() {
+        encoding=null;
+    }
+}
+
+```
 
 
 
