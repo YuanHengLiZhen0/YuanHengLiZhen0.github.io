@@ -1,7 +1,6 @@
 ---
 layout:     post
-title:     NIO学习(一)
-subtitle:  DatagramChannel连续传输图片
+title:     DatagramChannel连续传输图片  
 date:       2018-01-16
 author:    zwht
 header-img: img/post-bg-ios9-web.jpg
